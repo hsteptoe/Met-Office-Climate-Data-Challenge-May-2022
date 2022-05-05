@@ -52,13 +52,13 @@ climate_types = ['mean_temperature', 'max_temperature', 'rainfall', 'raindays_gt
                  'meantemp_days_gt_20C', 'meantemp_days_gt_25C', 'meantemp_days_gt_30C', 'maxtemp_days_gt_15C',
                  'maxtemp_days_gt_20C', 'maxtemp_days_gt_25C', 'maxtemp_days_gt_30C']
 
-# for crime_type in crime_types:
-#     for climate_type in climate_types:
-#         filename = output_location + 'plots/regplots/' + crime_type + '_' + climate_type + '.png'
-#
-#         sns.regplot(x=crime_type, y=climate_type, data=df_crime_climate, logx=True)
-#         plt.savefig(filename)
-#         plt.close()
+for crime_type in crime_types:
+    for climate_type in climate_types:
+        filename = output_location + 'plots/regplots/' + crime_type + '_' + climate_type + '.png'
+        
+        sns.regplot(x=crime_type, y=climate_type, data=df_crime_climate, logx=True)
+        plt.savefig(filename)
+        plt.close()
 
 
 # Spring plots
